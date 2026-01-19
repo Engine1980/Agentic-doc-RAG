@@ -11,9 +11,9 @@ def get_client() -> Anthropic:
    api_key = st.secrets.get(
     "ANTHROPIC_API_KEY",
     os.getenv("ANTHROPIC_API_KEY"))
-    if not api_key:
-        raise RuntimeError("ANTHROPIC_API_KEY not found. Check your .env or environment variables.")
-    return Anthropic(api_key=api_key)
+   if not api_key:
+      raise RuntimeError("ANTHROPIC_API_KEY not found. Check your .env or environment variables.")
+   return Anthropic(api_key=api_key)
 
 def claude(prompt: str, system: str = "", max_tokens: int = 800) -> str:
     client = get_client()
