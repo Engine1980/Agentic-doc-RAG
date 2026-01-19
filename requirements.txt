@@ -1,5 +1,8 @@
 streamlit
 anthropic
 python-dotenv
-faiss-cpu
+pypdf
 numpy
+faiss-cpu
+sentence-transformers
+torch
